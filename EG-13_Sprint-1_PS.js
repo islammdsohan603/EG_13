@@ -1,15 +1,11 @@
-function generateFibonacci(n) {
-  const fibonacci = [];
-  let a = 0;
-  let b = 1;
-  for (let i = 0; i < n; i++) {
-    fibonacci.push(a);
-    let next = a + b;
+function findGCD(a, b) {
+  while (b !== 0) {
+    let remainder = a % b;
     a = b;
-    b = next;
+    b = remainder;
   }
 
-  return fibonacci;
+  return a;
 }
 
-console.log(generateFibonacci(7));
+console.log(findGCD(48, 18));
