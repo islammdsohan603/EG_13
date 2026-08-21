@@ -1,12 +1,21 @@
-function findMedian(nums) {
-  nums.sort((a, b) => a - b);
+function findSecondLargest(nums) {
+  let largest = -Infinity;
+  let secondLargest = -Infinity;
 
-  let middle = Math.floor(nums.length / 2);
-  if (nums.length % 2 !== 0) {
-    return nums[middle];
-  } else {
-    return nums[middle - 1] + nums[middle] / 2;
+  for (let num of nums) {
+    if (num > largest) {
+      secondLargest = largest;
+      largest = num;
+    } else if (num > secondLargest && num !== largest) {
+      secondLargest = num;
+    }
   }
+
+  if (secondLargest === -Infinity) {
+    return null;
+  }
+
+  return secondLargest;
 }
 
-console.log(findMedian([7, 1, 3, 4, 9]));
+console.log(findSecondLargest([1, 3, 3, 2, 1, 3, 4]));
