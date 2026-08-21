@@ -6,19 +6,7 @@ The goal of this sprint is to strengthen fundamental programming concepts includ
 
 ---
 
-## 📌 Task Information
-
-| Information             | Details                    |
-| ----------------------- | -------------------------- |
-| **Program**             | Endgame-13                 |
-| **Sprint**              | Sprint-1                   |
-| **Task**                | Problem Solving            |
-| **Language**            | JavaScript                 |
-| **Total Problems**      | 10                         |
-| **Submission Deadline** | August 22, 2026 — 11:59 PM |
-| **Solution File**       | `EG-13_Sprint-1_PS.js`     |
-
----
+ 
 
 ## 🧩 Problems Solved
 
