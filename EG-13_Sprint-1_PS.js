@@ -1,30 +1,12 @@
-function mergeSortedArrays(arr1, arr2) {
-  let result = [];
+function findMedian(nums) {
+  nums.sort((a, b) => a - b);
 
-  let i = 0;
-  let j = 0;
-
-  while (i < arr1.length && j < arr2.length) {
-    if (arr1[i] < arr2[j]) {
-      result.push(arr1[i]);
-      i++;
-    } else {
-      result.push(arr2[j]);
-      j++;
-    }
+  let middle = Math.floor(nums.length / 2);
+  if (nums.length % 2 !== 0) {
+    return nums[middle];
+  } else {
+    return nums[middle - 1] + nums[middle] / 2;
   }
-
-  while (i < arr1.length) {
-    result.push(arr1[i]);
-    i++;
-  }
-
-  while (j < arr2.length) {
-    result.push(arr2[j]);
-    j++;
-  }
-
-  return result;
 }
 
-console.log(mergeSortedArrays([1, 3, 5], [2, 4, 6]));
+console.log(findMedian([7, 1, 3, 4, 9]));
