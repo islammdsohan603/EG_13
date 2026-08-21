@@ -1,15 +1,15 @@
-function findGCD(a, b) {
-  while (b !== 0) {
-    let remainder = a % b;
-    a = b;
-    b = remainder;
+function isPrime(num) {
+  if (num < 2) {
+    return false;
   }
 
-  return a;
+  for (let i = 2; i < num; i++) {
+    if (num % i === 0) {
+      return false;
+    }
+  }
+
+  return true;
 }
 
-function findLCM(a, b) {
-  return (a * b) / findGCD(a, b);
-}
-
-console.log(findLCM(12, 18));
+console.log(isPrime(29));
