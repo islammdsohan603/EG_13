@@ -1,15 +1,30 @@
-function isPrime(num) {
-  if (num < 2) {
-    return false;
-  }
+function mergeSortedArrays(arr1, arr2) {
+  let result = [];
 
-  for (let i = 2; i < num; i++) {
-    if (num % i === 0) {
-      return false;
+  let i = 0;
+  let j = 0;
+
+  while (i < arr1.length && j < arr2.length) {
+    if (arr1[i] < arr2[j]) {
+      result.push(arr1[i]);
+      i++;
+    } else {
+      result.push(arr2[j]);
+      j++;
     }
   }
 
-  return true;
+  while (i < arr1.length) {
+    result.push(arr1[i]);
+    i++;
+  }
+
+  while (j < arr2.length) {
+    result.push(arr2[j]);
+    j++;
+  }
+
+  return result;
 }
 
-console.log(isPrime(29));
+console.log(mergeSortedArrays([1, 3, 5], [2, 4, 6]));
