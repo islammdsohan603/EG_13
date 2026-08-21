@@ -1,21 +1,5 @@
-function findSecondLargest(nums) {
-  let largest = -Infinity;
-  let secondLargest = -Infinity;
-
-  for (let num of nums) {
-    if (num > largest) {
-      secondLargest = largest;
-      largest = num;
-    } else if (num > secondLargest && num !== largest) {
-      secondLargest = num;
-    }
-  }
-
-  if (secondLargest === -Infinity) {
-    return null;
-  }
-
-  return secondLargest;
+function naturalSort(arr) {
+  return arr.sort((a, b) => a.localeCompare(b, undefined, { numeric: true }));
 }
 
-console.log(findSecondLargest([1, 3, 3, 2, 1, 3, 4]));
+console.log(naturalSort(["file10.txt", "file2.txt", "file1.txt"]));
