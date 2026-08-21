@@ -8,4 +8,8 @@ function findGCD(a, b) {
   return a;
 }
 
-console.log(findGCD(48, 18));
+function findLCM(a, b) {
+  return (a * b) / findGCD(a, b);
+}
+
+console.log(findLCM(12, 18));
