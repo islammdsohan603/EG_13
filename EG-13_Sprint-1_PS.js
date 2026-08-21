@@ -1,9 +1,15 @@
-function isLeapYear(year) {
-  if (year % 400 === 0 || (year % 4 === 0 && year % 100 !== 0)) {
-    return true;
+function generateFibonacci(n) {
+  const fibonacci = [];
+  let a = 0;
+  let b = 1;
+  for (let i = 0; i < n; i++) {
+    fibonacci.push(a);
+    let next = a + b;
+    a = b;
+    b = next;
   }
 
-  return false;
+  return fibonacci;
 }
 
-console.log(isLeapYear(2024));
+console.log(generateFibonacci(7));
